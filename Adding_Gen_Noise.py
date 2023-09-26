@@ -35,4 +35,4 @@ cv.waitKey(0)
 cv.destroyAllWindows()
 
 # Save the noisy image
-cv2.imwrite('path_to write', noisy_image)
+cv.imwrite('path_to write', noisy_image)
