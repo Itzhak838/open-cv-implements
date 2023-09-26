@@ -4,7 +4,7 @@ The script is designed to add a colored Gaussian noise to a grayscale image.
 import cv2 as cv
 import numpy as np
 
-path = "gray_dog.jpg"  # path to image
+path = "path_to_image.jpg"  # path to image
 image_input_gray = cv.imread(path, cv.IMREAD_GRAYSCALE)  # read the image as is
 image_input = cv.cvtColor(image_input_gray, cv.COLOR_GRAY2RGB)  # convert to RGB format (necessary for the add function)
 
@@ -15,7 +15,7 @@ cv.waitKey(1000)  # show for a few seconds
 # create a matrix with random gaussian values
 # mean, std_division (mu), image dimension typed to uint8 (image format)
 noise_mat = np.random.normal(0, 1, (image_input.shape[0], image_input.shape[1])).astype(np.uint8)
-# convert to 3 dimensions - without it, the noise_mat is suitable gray images
+# convert to three dimensions - without it, the noise_mat is suitable gray images
 noise_mask = np.zeros((image_input.shape[0], image_input.shape[1], 3), dtype=np.uint8)
 # convert to one noisy channel: choose the color by the numbers bellow
 blue = 0
