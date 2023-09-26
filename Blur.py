@@ -1,5 +1,8 @@
+"""
+The script is designed to blur an image using Gaussian blur.
+Target: system resolution test
+"""
 import cv2 as cv
-
 # Load an image from file
 image = cv.imread('input_image.jpg')
 
